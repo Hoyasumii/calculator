@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { DarkLogo, LightLogo } from "@/components/svg";
+import type { RootPropertiesInterface } from "./types";
 
-export function Root({ children }: { children: React.ReactNode }) {
+export function Root({ children, DarkLogo, LightLogo }: RootPropertiesInterface) {
 	return (
 		<header className="px-4 py-3 bg-stone-50 dark:bg-stone-950 sticky top-0 flex items-stretch border-b-[0.5px] border-stone-300 dark:border-stone-800 text-inherit w-full ">
 			<Link
