@@ -30,6 +30,9 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
     
-      # - name: Building Next.js and Linting
-      #   run: |
+      - name: Building Next.js
+        run: pnpm build
+
+      - name: Biome Linting
+        run: pnpm lint
 
