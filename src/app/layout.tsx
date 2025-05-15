@@ -15,9 +15,9 @@ export default function RootLayout({
 	return (
 		<HTML>
 			<Body>
-				<Navbar.Root>
+				{/* <Navbar.Root>
 					<Navbar.MadeBy />
-				</Navbar.Root>
+				</Navbar.Root> */}
 			</Body>
 		</HTML>
 	);
