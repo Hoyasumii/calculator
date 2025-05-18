@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  builds:
+  building-linting-testing:
     runs-on: "ubuntu-latest"
 
     strategy:
