@@ -1,4 +1,4 @@
-name: "Deploying in Vercel"
+name: "Continuous Delivery"
 
 on:
   workflow_run:
@@ -28,7 +28,7 @@ jobs:
         run: pnpm install
 
       - name: Install Vercel CLI
-        run: npm -g vercel
+        run: npm i -g vercel
 
       - name: Deploy to Vercel
         run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }}

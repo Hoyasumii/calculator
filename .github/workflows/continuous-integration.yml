@@ -1,4 +1,4 @@
-name: "Testing to accept Build"
+name: "Continuous Integration"
 
 on:
   push:
