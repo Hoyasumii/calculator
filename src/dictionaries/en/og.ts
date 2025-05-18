@@ -1,4 +1,4 @@
 export default {
-  title: "Create your QR Codes | Alan Reis",
-  description: "Create your QR Codes easily!",
+  title: "Calculator | Alan Reis",
+  description: "1 ➕ 1 🟰 2",
 };
