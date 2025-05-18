@@ -2,7 +2,7 @@ name: "Continuous Delivery"
 
 on:
   workflow_run:
-    workflows: ["Testing to accept Build"]
+    workflows: ["Continuous Integration"]
     types:
       - completed
 
