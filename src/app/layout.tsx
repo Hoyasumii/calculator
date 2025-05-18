@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Body, HTML, Navbar } from "@/components/ui";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
 				{/* <Navbar.Root>
 					<Navbar.MadeBy />
 				</Navbar.Root> */}
+				<SpeedInsights />
 			</Body>
 		</HTML>
 	);
