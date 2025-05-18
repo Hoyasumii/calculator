@@ -36,5 +36,5 @@ jobs:
       - name: Biome Linting
         run: pnpm lint
 
-      - name: Testing
+      - name: Testing Unit Tests
         run: pnpm test

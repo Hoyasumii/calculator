@@ -1,0 +1,26 @@
+name: "Deploying in Vercel"
+
+on:
+  workflow_run:
+    workflows: ["Testing to accept Build"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependências
+        run: pnpm install
+
+      - name: Deploy para Vercel
+        run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }}
