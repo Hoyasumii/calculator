@@ -7,7 +7,7 @@ on:
       - completed
 
 jobs:
-  deploy:
+  deploying-to-vercel:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
@@ -31,4 +31,4 @@ jobs:
         run: npm i -g vercel
 
       - name: Deploy to Vercel
-        run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }}
+        run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }} --yes
