@@ -27,5 +27,8 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Install Vercel CLI
+        run: npm -g vercel
+
       - name: Deploy to Vercel
         run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }}
