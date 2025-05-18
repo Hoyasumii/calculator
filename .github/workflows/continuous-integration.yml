@@ -22,7 +22,7 @@ jobs:
         with: 
           node-version: ${{ matrix.node-version }}
 
-      - name: Ativar Corepack
+      - name: Enable Corepack
         run: |
           corepack enable
           corepack prepare pnpm@10.10.0 --activate

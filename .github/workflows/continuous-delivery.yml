@@ -17,10 +17,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
-      - name: Instalar dependências
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare pnpm@10.10.0 --activate
+
+      - name: Install Dependencies
         run: pnpm install
 
-      - name: Deploy para Vercel
+      - name: Deploy to Vercel
         run: vercel --prod --token ${{ secrets.GITHUB_TOKEN }}
