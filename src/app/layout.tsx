@@ -11,6 +11,8 @@ import { pickDictionary } from "@/services";
 import { LogoDark, LogoLight } from "@/components/svg";
 import { Suspense } from "react";
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata(): Promise<Metadata> {
 	const requestHeaders = await headers();
 
