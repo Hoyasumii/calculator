@@ -47,7 +47,7 @@ export default function RootLayout({
 				<Navbar.Root DarkLogo={LogoDark} LightLogo={LogoLight}>
 					<Navbar.MadeBy />
 				</Navbar.Root>
-				<Main>{children}</Main>
+				<Main className="">{children}</Main>
 				<SpeedInsights />
 			</Body>
 		</HTML>
