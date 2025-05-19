@@ -9,6 +9,7 @@ import { Body, HTML, Main, Navbar } from "@/components/ui";
 
 import { pickDictionary } from "@/services";
 import { LogoDark, LogoLight } from "@/components/svg";
+import { Suspense } from "react";
 
 export async function generateMetadata(): Promise<Metadata> {
 	const requestHeaders = await headers();
@@ -42,14 +43,16 @@ export default async function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<HTML>
-			<Body>
-				<Navbar.Root DarkLogo={LogoDark} LightLogo={LogoLight}>
-					<Navbar.MadeBy />
-				</Navbar.Root>
-				<Main className="">{children}</Main>
-				<SpeedInsights />
-			</Body>
-		</HTML>
+		<Suspense>
+			<HTML>
+				<Body>
+					<Navbar.Root DarkLogo={LogoDark} LightLogo={LogoLight}>
+						<Navbar.MadeBy />
+					</Navbar.Root>
+					<Main className="">{children}</Main>
+					<SpeedInsights />
+				</Body>
+			</HTML>
+		</Suspense>
 	);
 }
