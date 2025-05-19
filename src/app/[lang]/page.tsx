@@ -4,12 +4,9 @@ import { BackspaceButton } from "@/components/BackspaceButton";
 import { ControlButton } from "@/components/ControlButton";
 import { NumberButton } from "@/components/NumberButton";
 import {
-	Delete,
 	Diff,
 	Divide,
-	Equal,
 	Minus,
-	Percent,
 	Plus,
 	X,
 } from "lucide-react";
